@@ -37,7 +37,7 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="Autostart" >
-                <param name="android-package" value="com.aaronrzh.cordova.plugin.autostart.AutostartPlugin"/>
+                <param name="androSid-package" value="com.aaronrzh.cordova.plugin.autostart.AutostartPlugin"/>
                 <param name="onload" value="true" />
             </feature>
         </config-file>
@@ -53,6 +53,8 @@
         <config-file target="AndroidManifest.xml" parent="/manifest">
             <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
             <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+            <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+            <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
         </config-file>
 
         <source-file src="src/android/AutostartPlugin.java" target-dir="src/com/aaronrzh/cordova/plugin/autostart" />
